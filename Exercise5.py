@@ -23,20 +23,25 @@ a = []
 b = []
 z = []
 
-# Generate 14 random numbers and add to lists a and b
-for i in range(1,15):
+# Generate 14 random numbers and add to lists a and b // alternativly ask user for 2 numbers
+
+num1=int(input("Enter a random number a:"))
+num2=int(input("Enter a random bumber b:"))
+
+for i in range(1,num1+1):
     n=random.randint(2,50)
     a.append(n)
 
-for i in range(1,15):
+for i in range(1,num2+1):
     x=random.randint(2,50)
     b.append(x)
 
 # Print lists a and b
 
 print()
-print(a)
-print(b)
+print("First list:",a)
+print()
+print("Second list:",b)
 print()
 
 # Check to see the intersection of lists
