@@ -15,7 +15,7 @@ b=[]
 
 # User input string
 
-string=str(input("Enter a word:"))
+string=str(input("Enter a String:"))
 
 
 # Convert to lower [ can be uppercase as well ]
