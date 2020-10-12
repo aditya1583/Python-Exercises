@@ -9,7 +9,7 @@ Then I would see the string:
   Michele is name My
 
 shown back to me.
-
+"""
 b = []
 
 def print_backwards(string):
@@ -26,14 +26,4 @@ def print_backwards(string):
 ## User input        
 string = str(input("Enter a sentence:"))
 print_backwards(string)
-"""
-def ask():
-    s = input("Give me a sentence or some random words:")
-    return s
 
-s = ask()
-a = s.split()
-s = ""
-while a != []:
-    s=s + a.pop() + ", "
-print(s)
