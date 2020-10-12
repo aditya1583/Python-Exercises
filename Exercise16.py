@@ -9,8 +9,8 @@ Extra:
 
     Ask the user how strong they want their password to be. For weak passwords, pick a word or two from a list.
 
-"""
 
+"""
 
 
 
@@ -26,7 +26,7 @@ def hard():
     x = []
     choice = int(input("\nEnter how many charetcters would you like to have created:"))
     for i in range(1, choice+1):
-        x.append(random.choice('1278abcdi!@#$%jklmnop3456qrefghstuvwxyz90^&*'))
+        x.append(random.choice('IJKLMNOP1278abcdi!@#WXY$%jklmnop345ABCDEFGH6qrefghstuvZwxyz90^&*QRSTUV'))
 
 ##  THIS WILL PRINT THE PASSWORD
     
@@ -58,44 +58,23 @@ while True:
     else:
         hard()
 
+
 """
 
-def genStrongPassword():
-    upperchars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    lowerchars = "abcdefghijklmnopqrstuvwxyz"
-    nums = "0123456789"
-    specialchars = "!@#$%^&*()"
+def genhardpass():
+    upperchars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    lowerchars = 'abcdefghijklmnopqrstuvwxyz'
+    specialchars = '!@#$%^&*()'
+    nums = '1234567890'
+    charlist = [upperchars, lowerchars, specialchars, nums]
     password = ''
-    password = password + random.choice(upperchars)
-    password = password + random.choice(lowerchars)
-    password = password + random.choice(nums)
-    password = password + random.choice(specialchars)
-    password = password + random.choice(upperchars)
-    password = password + random.choice(lowerchars)
-    password = password + random.choice(nums)
-    password = password + random.choice(specialchars)
-    return(password)
+    index = 0
 
-def generateWeakPassword():
-    defpass = [ '01234', '56789', 'abcdefg', 'hijklmn', 'opqrstuvezxy' ]
-    return(random.choice(defpass))
+    while index < 10:
+        password += random.choice(random.choice(charlist))
+        index +=  1
+    return password
 
-print('Generating password 1', genStrongPassword())
-print('Generating password 2', genStrongPassword())
-print('Generating password 3', genStrongPassword())
-print('Generating password 4', genStrongPassword())
-
-answer = input('Do you want strong or weak password?')
-if answer == 'strong':
-    print('Your strong password is ',genStrongPassword())
-elif answer == 'weak':
-    print('Your weak password is ',generateWeakPassword())
-else:
-    print('ERROR, you have typed a wrong word, please try again typing "strong" or "weak"')
-"""
+print(genhardpass())
 
 
-
-    
-
-    
