@@ -28,16 +28,16 @@ def numpresent():
 
 
 def gen_rand(uinput1):
-#    return(uinput1)
      for i in range(1,uinput1+1):
          a.append(random.randint(1,99))
-     x = sorted(a)
-     print(x)
+     sortA = list(dict.fromkeys(sorted(a)))
+     print(sortA)
      numpresent()
-     exit_func()
-    
+     exit_func()   
+     
 
 while True:
+    #i = 0
     a = []
     b = []
     uinput1 = int(input("Enter the numbers you want to generate:"))
