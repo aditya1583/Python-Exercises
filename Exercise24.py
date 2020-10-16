@@ -21,12 +21,10 @@ Ask the user what size game board they want to draw, and draw it for them to the
 def tictactoe(size):
     line = ' ---'
     column = '|   '
-    for i in range(1,size):
-        print(line*size)
-        print(column*(size+1))
-    print(line*size)
-
-if __name__ == "__main__":
-    number = int(input("Enter a number: "))
-    tictactoe(number)
+    for i in range(1,size+1):
+        print(size*line)
+        print((size+1)*column)
+    print(size*line)
+number = int(input("Enter a num:"))
+tictactoe(number)
 
