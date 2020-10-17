@@ -1,4 +1,5 @@
 #!/Library/Frameworks/Python.framework/Versions/3.9/bin/python3
+
 if __name__ == '__main__':
     a= []
     for _ in range(int(input())):
@@ -14,4 +15,6 @@ if __name__ == '__main__':
     c.sort(key=lambda x: x[1])
     for i in range(len(c)):
         print(c[i][1])
+
+
 
