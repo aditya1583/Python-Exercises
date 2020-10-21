@@ -1,10 +1,3 @@
-# from builtins import hash
-# if __name__ == '__main__':
-#     n = int(input())
-#     integer_list = map(int, input().split())
-#     print(integer_list)
-#     # x = hash(n)
-#     # print(x)
 
 n = input()
 input_line = input()
