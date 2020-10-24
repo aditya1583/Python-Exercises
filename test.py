@@ -6,11 +6,24 @@ def difference_max_min(lst):
     # x = max(lst)
     # y = min(lst)
     # return(x - y)
-    maxm = lst[0]
-    for num in lst:
-        if maxm < num:
-            maxm = num
-    return(maxm)
+    # maxm = lst[0]
+    # for num in lst:
+    #     if maxm < num:
+    #         maxm = num
+    # return(maxm)
+    # return(max(lst) - min(lst))
+    max_n = lst[0]
+    min_n = lst[0]
+    for i in lst:
+        if max_n < i:
+            max_n = i # max_n = 4
+    Max = max_n
+    for i in lst:
+        if min_n > i:
+            min_n = i
+    Min = min_n
+
+    return((Max) - (Min))
 
 
 lst = [ 0, 4, 1, 4, -10, -50, 32, 21]
